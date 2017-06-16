@@ -1,0 +1,17 @@
+{ "artists": [{
+    "name": "Allie Hankins",
+    "bio": "is a performer & performance maker, teacher, and researcher currently residing in Portland. She is an inaugural member of FLOCK, a new dance center & creative home to Portland’s experimental dance artists, and a founding member of Physical Education, a critical & casual, reading & researching, drinking & dialoguing, dance & performance body comprised of herself, keyon gaskin, Taka Yamamoto, and Lucy Lee Yim. She was most recently seen performing in works by Taka Yamamoto & Tahni Holt, and in her own solo Like A Sun That Pours Forth Light but Never Warmth. Her new endeavors include a project in progress titled better to be alone than to wish you were, her all-levels movement class Transcendentaerobicourage, and learning  American Sign Language, which, as it turns out, is one of her greatest passions. alliehankins.com & physsicalleduucationn.wordpress.com",
+    "position": "performer",
+    "project": "Un(Made)"
+    }, {
+    "name": "Linda Austin",
+    "bio": "delights in and is provoked by how her dance practices and obsessions contradict each other. She has been choreographing and performing, often with a strong visual element and a commitment to original music, for more than three decades, while fostering the creation of her own and many others’ work through Performance Works NorthWest for the past 15 years. Her work exploits and explores the body’s powers and limits, bringing each performer’s vulnerabilities and strengths, accidents of awkwardness and elegance, into a web of relationships—intimate, playful, confrontational—with other bodies, objects, environment, sound and media. The resultant works are non-linear, poetic, often laced with humor, deploying movement that often disrupts what is generally considered “dancerly. Honors received include Fellowships from the New York Foundation for the Arts, the Oregon Arts Commission, and most recently, an award of $20,000 as a Regional Arts & Culture Council Fellow in the Performing Arts. http://pwnw-pdx.org/linda-austin-dance/",
+    "position": "choreographer",
+    "project": "Paired Spectacular"
+      }, {
+    "name": "keyon gaskin",
+    "bio": "doesn’t care to contextualize your experience of his performance(s) with his credentials.",
+    "position": "performer",
+    "project": "A head of time"
+  }]
+}

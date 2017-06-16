@@ -1,0 +1,14 @@
+h1 {
+  text-align: center;
+  color: green;
+}
+
+a {
+  color: purple;
+  font-size: 2em;
+}
+
+a:hover {
+  color: magenta;
+  font-style: oblique;
+}
