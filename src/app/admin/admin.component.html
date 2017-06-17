@@ -1,3 +1,47 @@
-<p>
-  admin works!
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Artist to Inventory</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Artist Name:</label>
+        <br>
+        <input #newName>
+      </div>
+
+      <div>
+        <label>Artist Position:</label>
+        <br>
+        <input #newPosition>
+      </div>
+
+      <div>
+        <label>Artist Bio:</label>
+        <br>
+        <textarea #newBio></textarea>
+      </div>
+
+      <select #newProject>
+        <option *ngFor="let project of projects | async" value="{{project.$key}}">{{project.title}}
+        </option>
+      </select>
+
+      <button (click)="submitForm(newName.value, newPosition.value, newBio.value, newProject.value); newName.value=''; newArtist.value=''; newBio.value=''; newProject.value='';">Add</button>
+    </div>
+  </div>
+</div>
+
+<app-project></app-project>
+
+<div *ngFor="let artist of artists | async" class="panel panel-default">
+  <div class="panel-body">
+
+    <h3 (click)="goToDetailPage(artist)"><em>{{artist.name}}</em> , {{artist.position}}</h3>
+    <div>
+      {{artist.bio}}
+      <hr>
+      <app-edit-artist [selectedArtist]="artist"></app-edit-artist>
+    </div>
+  </div>
+</div>

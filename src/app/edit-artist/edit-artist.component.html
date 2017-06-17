@@ -1,3 +1,19 @@
-<p>
-  edit-artist works!
-</p>
+<h4 (click)="showEdit = !showEdit">Edit Artist</h4>
+
+<div *ngIf="showEdit">
+  <input placeholder="New Artist Name" [(ngModel)]="selectedArtist.name">
+  <br>
+
+  <input placeholder="New Artist Position" [(ngModel)]="selectedArtist.position">
+  <br>
+
+  <input placeholder="New Artist Bio" [(ngModel)]="selectedArtist.bio">
+
+  <select id="newProject" [(ngModel)]="selectedArtist.project">
+    <option *ngFor="let project of projects | async" value={{project.$key}}>{{project.title}}
+    </option>
+  </select>
+
+  <button class="btn btn-success" (click)="beginUpdateArtist(selectedArtist)">Update</button>
+  <!-- <button class="btn btn-danger" (click)="beginDeletingArtist(selectedArtist)">Delete</button> -->
+</div>

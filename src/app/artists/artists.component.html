@@ -1,3 +1,15 @@
-<p>
-  artists works!
-</p>
+<div *ngFor="let project of projects | async">
+  <h2 *ngIf="project.$key === key">{{project.title}}</h2>
+</div>
+
+<div *ngFor="let artist of artists | async">
+  <div class="panel panel-default" *ngIf="artist.project === key">
+    <div class="panel-body">
+
+      <h3 (click)="goToDetailPage(artist)"><em>{{artist.name}}</em> , {{artist.position}}</h3>
+      <div>
+        {{artist.bio}}
+      </div>
+    </div>
+  </div>
+</div>

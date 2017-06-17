@@ -1,3 +1,7 @@
-<p>
-  project works!
-</p>
+<h2>Add Project</h2>
+
+<input placeholder="Project Title" #newProjectTitle>
+<input placeholder="Project Type" #newProjectType>
+<input placeholder="Project Year" #newProjectYear>
+
+<button class="btn" (click)="submitProject(newProjectTitle.value, newProjectType.value, newProjectYear.value)">Add</button>
