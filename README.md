@@ -1,4 +1,4 @@
-![screenshot](assets/public/images/linda.png)
+![screenshot](src/assets/public/images/linda.png)
 
 # Linda Austin Dance
 
