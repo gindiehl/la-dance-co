@@ -6,9 +6,9 @@
   <div class="panel panel-default" *ngIf="artist.project === key">
     <div class="panel-body">
 
-      <h3 (click)="goToDetailPage(artist)"><em>{{artist.name}}</em> , {{artist.position}}</h3>
+      <h3 (click)="goToDetailPage(artist)"><em>{{artist.name}}</em>, {{artist.bio}}</h3>
       <div>
-        {{artist.bio}}
+        {{artist.position}}
       </div>
     </div>
   </div>

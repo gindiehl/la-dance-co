@@ -31,9 +31,6 @@ export class HomeComponent {
   };
 
   findArtistsByProject(project) {
-    console.log(project);
-    console.log(this.projects);
-    console.log(this.artists);
   }
 
 }

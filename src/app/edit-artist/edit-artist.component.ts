@@ -20,4 +20,14 @@ export class EditArtistComponent implements OnInit {
     this.projects = this.artistService.getProjects();
   }
 
+  beginUpdateArtist(artistToUpdate){
+    this.artistService.updateArtist(artistToUpdate);
+  }
+
+  beginDeletingArtist(artistToDelete){
+    if(confirm("Are you sure you want to delete this artist from the project?")){
+      this.artistService.deleteArtist(artistToDelete);
+    }
+  }
+
 }

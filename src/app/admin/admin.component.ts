@@ -17,6 +17,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class AdminComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
   artists: FirebaseListObservable<any[]>;
+  artistName: string;
   currentRoute: string = this.router.url;
 
   constructor(

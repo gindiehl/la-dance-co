@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { ArtistsComponent } from './artists/artists.component';
 import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
 import { AdminComponent } from './admin/admin.component';
+import { AuthComponent } from './auth/auth.component';
 
 const appRoutes: Routes = [
   {
@@ -25,7 +26,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'admin',
-    component: AdminComponent
+    component: AuthComponent
   }
 ];
 

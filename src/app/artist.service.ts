@@ -48,4 +48,9 @@ export class ArtistService {
         project: localUpdatedArtist.project
       });
   }
+  
+  deleteArtist(localArtistToDelete){
+    var artistEntryInFirebase = this.getArtistById(localArtistToDelete.$key);
+    artistEntryInFirebase.remove();
+  }
 }
