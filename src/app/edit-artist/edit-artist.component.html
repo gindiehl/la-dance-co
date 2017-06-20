@@ -1,19 +1,20 @@
 <h4 (click)="showEdit = !showEdit">Edit Artist</h4>
 
 <div *ngIf="showEdit">
-  <input placeholder="New Artist Name" [(ngModel)]="selectedArtist.name">
+  <input class="form-control input-lg" placeholder="New Artist Name" [(ngModel)]="selectedArtist.name">
   <br>
 
-  <input placeholder="New Artist Position" [(ngModel)]="selectedArtist.position">
+  <input class="form-control input-lg" placeholder="New Artist Position" [(ngModel)]="selectedArtist.position">
   <br>
 
-  <input placeholder="New Artist Bio" [(ngModel)]="selectedArtist.bio">
-
+  <textarea placeholder="New Artist Bio" [(ngModel)]="selectedArtist.bio"></textarea>
+  <br>
   <select id="newProject" [(ngModel)]="selectedArtist.project">
     <option *ngFor="let project of projects | async" value={{project.$key}}>{{project.title}}
     </option>
   </select>
+  <br>
 
-  <button class="btn btn-success" (click)="beginUpdateArtist(selectedArtist)">Update</button>
-  <button class="btn btn-danger" (click)="beginDeletingArtist(selectedArtist)">Delete</button>
+  <br><button class="btn btn-success" (click)="beginUpdateArtist(selectedArtist)">Update</button><br>
+  <br><button class="btn btn-danger" (click)="beginDeletingArtist(selectedArtist)">Delete</button><br>
 </div>

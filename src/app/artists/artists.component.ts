@@ -18,8 +18,8 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 export class ArtistsComponent implements OnInit {
   artists: FirebaseListObservable<any[]>;
   projects: FirebaseListObservable<any[]>;
-
   currentRoute: string = this.router.url;
+  filterByRole: string = "allArtists";
   projectIdToFind;
   key;
 
@@ -32,6 +32,13 @@ export class ArtistsComponent implements OnInit {
 
   ngOnInit() {
     this.artists = this.artistService.getArtists();
+      // if(this.currentRoute === '/artists/:id'){
+      //   this.filterByRole = "Performers";
+      // } else if (this.currentRoute === '/artists/:id'){
+      //   this.filterByRole = "Musicians";
+      // } else {
+      //   this.filterByRole = "allArtists";
+      // };
     this.projects = this.artistService.getProjects();
     this.route.params.forEach((urlParameters) => {
       this.key = urlParameters['project'];
@@ -41,4 +48,8 @@ export class ArtistsComponent implements OnInit {
   goToDetailPage(clickedArtist) {
     this.router.navigate(['artists', clickedArtist.$key]);
   };
+
+  onChange(menuOption){
+    this.filterByRole = menuOption;
+  }
 }

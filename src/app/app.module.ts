@@ -17,6 +17,7 @@ import { AuthComponent } from './auth/auth.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { RolePipe } from './role.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -35,7 +36,8 @@ export const firebaseConfig = {
     ArtistDetailComponent,
     AdminComponent,
     EditArtistComponent,
-    AuthComponent
+    AuthComponent,
+    RolePipe
   ],
   imports: [
     BrowserModule,

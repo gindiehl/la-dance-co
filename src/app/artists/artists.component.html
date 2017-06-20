@@ -2,13 +2,22 @@
   <h2 *ngIf="project.$key === key">{{project.title}}</h2>
 </div>
 
-<div *ngFor="let artist of artists | async">
+<h2>Filter artists by role/position:</h2>
+<select class="form-control" (change)="onChange($event.target.value)">
+  <option value="allArtists">All Artists</option>
+  <option value="performers">Performers</option>
+  <option value="musicians">Musicians</option>
+  <option value="visual">Visual Artists</option>
+  <option value="writer">Writers</option>
+</select>
+<br>
+<div *ngFor="let artist of artists | async | role:filterByRole">
   <div class="panel panel-default" *ngIf="artist.project === key">
     <div class="panel-body">
 
-      <h3 (click)="goToDetailPage(artist)"><em>{{artist.name}}</em>, {{artist.bio}}</h3>
+      <h3 (click)="goToDetailPage(artist)"><em>{{artist.name}}</em>, {{artist.position}}</h3>
       <div>
-        {{artist.position}}
+        {{artist.bio}}
       </div>
     </div>
   </div>
