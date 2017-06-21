@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Artist } from '../artist.model';
@@ -32,24 +32,17 @@ export class ArtistsComponent implements OnInit {
 
   ngOnInit() {
     this.artists = this.artistService.getArtists();
-      // if(this.currentRoute === '/artists/:id'){
-      //   this.filterByRole = "Performers";
-      // } else if (this.currentRoute === '/artists/:id'){
-      //   this.filterByRole = "Musicians";
-      // } else {
-      //   this.filterByRole = "allArtists";
-      // };
     this.projects = this.artistService.getProjects();
     this.route.params.forEach((urlParameters) => {
       this.key = urlParameters['project'];
     });
   }
 
+  onChange(menuOption){
+    this.filterByRole = menuOption;
+  }
   goToDetailPage(clickedArtist) {
     this.router.navigate(['artists', clickedArtist.$key]);
   };
 
-  onChange(menuOption){
-    this.filterByRole = menuOption;
-  }
 }

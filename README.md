@@ -2,15 +2,17 @@
 
 # Linda Austin Dance
 
-This <a href="https://angular.io/">angular4</a> application tracks and manages artists involved in projects by choreographer <a href="https://pwnw-pdx.org/linda-austin-dance/">Linda Austin</a>. An administrator can log in to create, edit and remove artists on projects. All information is stored in a <a href="https://firebase.google.com/">firebase</a> database.
+This <a href="https://angular.io/">angular4</a> application tracks and manages artists involved in projects by choreographer <a href="https://pwnw-pdx.org/linda-austin-dance/">Linda Austin</a>. An administrator can log in to create, edit, remove & filter artists by role on  projects. All information is dynamically stored in a <a href="https://firebase.google.com/">firebase</a> database.
 
 ### Installation/ Usage
 _note: to run this locally you'll need an account with firebase_
 
 * Clone this repo
 * Navigate to the locally cloned repo `$ cd la-dance`
+* Run `$ apm install atom-typescript`
 * Run `$ npm install`
 * Run `$ bower install`
+* Run `$ bower install bootstrap --save`
 
 _dance around & thank <a href="http://seanpierce.us/">Sean</a> for detailing these instructions_
 
